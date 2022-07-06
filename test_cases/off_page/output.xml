@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220706 18:58:44.776" rpa="false" schemaversion="3">
+<suite id="s1" name="Off Page" source="C:\Games\тестовое\test-app\test_cases\off_page\off_page.robot">
+<test id="s1-t1" name="Test Case_035" line="7">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:58:45.158" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:58:45.158" endtime="20220706 18:58:47.605"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:58:47.605" endtime="20220706 18:58:47.738"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:58:47.739" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:58:47.738" endtime="20220706 18:58:47.739"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:58:47.740" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:58:47.739" endtime="20220706 18:58:47.740"/>
+</kw>
+<status status="PASS" starttime="20220706 18:58:45.157" endtime="20220706 18:58:47.740"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${user}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[1]/input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:58:47.745" level="INFO">Typing text 'test' into text field 'xpath:/html/body/div/div/div/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220706 18:58:47.743" endtime="20220706 18:58:47.891"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:58:47.892" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:58:47.947" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:58:48.007" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:58:47.891" endtime="20220706 18:58:48.008"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:58:48.008" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220706 18:58:48.008" endtime="20220706 18:58:48.083"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:58:49.097" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:58:48.084" endtime="20220706 18:58:49.097"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220706 18:58:49.102" level="INFO">Current location is 'http://localhost:8080/#/home'.</msg>
+<status status="PASS" starttime="20220706 18:58:49.097" endtime="20220706 18:58:49.102"/>
+</kw>
+<status status="PASS" starttime="20220706 18:58:47.741" endtime="20220706 18:58:49.102"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/main/div[1]/div/div[2]/button[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:58:49.103" level="INFO">Clicking button 'xpath:/html/body/div/div/div/main/div[1]/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20220706 18:58:49.102" endtime="20220706 18:58:49.165"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:58:54.179" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220706 18:58:49.166" endtime="20220706 18:58:54.179"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:58:54.180" endtime="20220706 18:58:56.284"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:58:56.285" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:58:56.284" endtime="20220706 18:58:56.285"/>
+</kw>
+<status status="PASS" starttime="20220706 18:58:54.179" endtime="20220706 18:58:56.285"/>
+</kw>
+<status status="PASS" starttime="20220706 18:58:45.156" endtime="20220706 18:58:56.285"/>
+</test>
+<status status="PASS" starttime="20220706 18:58:44.779" endtime="20220706 18:58:56.286"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Off Page">Off Page</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

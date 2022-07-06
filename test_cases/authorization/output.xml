@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220706 18:16:18.450" rpa="false" schemaversion="3">
+<suite id="s1" name="First Checks" source="C:\Games\тестовое\test-app\test_cases\authorization\first_checks.robot">
+<test id="s1-t1" name="Test Case_001" line="9">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:16:18.827" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:16:18.826" endtime="20220706 18:16:21.046"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:16:21.046" endtime="20220706 18:16:21.178"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:21.179" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:16:21.179" endtime="20220706 18:16:21.179"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:21.180" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:16:21.179" endtime="20220706 18:16:21.180"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:18.825" endtime="20220706 18:16:21.180"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${user}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[1]/input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:21.182" level="INFO">Typing text 'test' into text field 'xpath:/html/body/div/div/div/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220706 18:16:21.181" endtime="20220706 18:16:21.296"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:21.296" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:16:21.344" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:16:21.402" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:16:21.296" endtime="20220706 18:16:21.402"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:21.403" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220706 18:16:21.402" endtime="20220706 18:16:21.482"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:16:22.488" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:16:21.482" endtime="20220706 18:16:22.488"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220706 18:16:22.494" level="INFO">Current location is 'http://localhost:8080/#/home'.</msg>
+<status status="PASS" starttime="20220706 18:16:22.488" endtime="20220706 18:16:22.494"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:21.180" endtime="20220706 18:16:22.494"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:16:22.495" endtime="20220706 18:16:24.699"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:24.699" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:16:24.699" endtime="20220706 18:16:24.700"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:22.495" endtime="20220706 18:16:24.700"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:18.824" endtime="20220706 18:16:24.700"/>
+</test>
+<test id="s1-t2" name="Test Case_002" line="14">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:16:24.702" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:16:24.702" endtime="20220706 18:16:26.521"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:16:26.522" endtime="20220706 18:16:26.649"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:26.650" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:16:26.649" endtime="20220706 18:16:26.650"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:26.650" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:16:26.650" endtime="20220706 18:16:26.650"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:24.701" endtime="20220706 18:16:26.650"/>
+</kw>
+<kw name="Click to eye" library="resources1">
+<arg>${password}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:26.653" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:16:26.709" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:16:26.780" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:16:26.652" endtime="20220706 18:16:26.780"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:26.781" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[2]/div[2]/button'.</msg>
+<status status="PASS" starttime="20220706 18:16:26.780" endtime="20220706 18:16:26.873"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:16:27.886" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:16:26.873" endtime="20220706 18:16:27.886"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:26.651" endtime="20220706 18:16:27.886"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:16:27.887" endtime="20220706 18:16:30.110"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:30.111" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:16:30.111" endtime="20220706 18:16:30.111"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:27.887" endtime="20220706 18:16:30.111"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:24.701" endtime="20220706 18:16:30.112"/>
+</test>
+<test id="s1-t3" name="Test Case_003" line="19">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:16:30.115" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:16:30.114" endtime="20220706 18:16:32.093"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:16:32.093" endtime="20220706 18:16:32.221"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:32.221" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:16:32.221" endtime="20220706 18:16:32.221"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:32.221" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:16:32.221" endtime="20220706 18:16:32.222"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:30.114" endtime="20220706 18:16:32.222"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${empty_user}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[1]/input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:32.223" level="INFO">Typing text '   ' into text field 'xpath:/html/body/div/div/div/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220706 18:16:32.222" endtime="20220706 18:16:32.320"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:32.321" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:16:32.367" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:16:32.416" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:16:32.321" endtime="20220706 18:16:32.416"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:32.417" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220706 18:16:32.416" endtime="20220706 18:16:32.478"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:16:33.484" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:16:32.478" endtime="20220706 18:16:33.484"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220706 18:16:33.607" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220706 18:16:33.608" level="FAIL">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</msg>
+<status status="FAIL" starttime="20220706 18:16:33.484" endtime="20220706 18:16:33.609"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:32.222" endtime="20220706 18:16:33.610"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:16:33.612" endtime="20220706 18:16:35.780"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:35.780" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:16:35.780" endtime="20220706 18:16:35.781"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:33.611" endtime="20220706 18:16:35.781"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:30.113" endtime="20220706 18:16:35.781">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</status>
+</test>
+<test id="s1-t4" name="Test Case_004" line="24">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:16:35.785" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:16:35.784" endtime="20220706 18:16:37.725"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:16:37.725" endtime="20220706 18:16:37.855"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:37.856" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:16:37.856" endtime="20220706 18:16:37.856"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:37.856" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:16:37.856" endtime="20220706 18:16:37.856"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:35.784" endtime="20220706 18:16:37.857"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${user}</arg>
+<arg>${empty_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[1]/input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:37.859" level="INFO">Typing text 'test' into text field 'xpath:/html/body/div/div/div/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220706 18:16:37.858" endtime="20220706 18:16:37.962"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:37.963" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:16:38.019" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:16:38.074" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:16:37.962" endtime="20220706 18:16:38.074"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:38.075" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220706 18:16:38.075" endtime="20220706 18:16:38.154"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:16:39.156" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:16:38.154" endtime="20220706 18:16:39.156"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220706 18:16:39.295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220706 18:16:39.295" level="FAIL">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</msg>
+<status status="FAIL" starttime="20220706 18:16:39.156" endtime="20220706 18:16:39.296"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:37.857" endtime="20220706 18:16:39.297"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:16:39.298" endtime="20220706 18:16:41.465"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:41.466" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:16:41.465" endtime="20220706 18:16:41.466"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:39.298" endtime="20220706 18:16:41.466"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:35.782" endtime="20220706 18:16:41.466">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</status>
+</test>
+<test id="s1-t5" name="Test Case_005" line="29">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:16:41.469" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:16:41.468" endtime="20220706 18:16:43.316"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:16:43.316" endtime="20220706 18:16:43.463"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:43.464" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:16:43.463" endtime="20220706 18:16:43.464"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:43.465" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:16:43.464" endtime="20220706 18:16:43.465"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:41.468" endtime="20220706 18:16:43.465"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${empty_user}</arg>
+<arg>${empty_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[1]/input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:43.467" level="INFO">Typing text '   ' into text field 'xpath:/html/body/div/div/div/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220706 18:16:43.466" endtime="20220706 18:16:43.583"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:43.584" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:16:43.638" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:16:43.704" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:16:43.583" endtime="20220706 18:16:43.704"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:43.705" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220706 18:16:43.704" endtime="20220706 18:16:43.784"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:16:44.785" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:16:43.784" endtime="20220706 18:16:44.785"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220706 18:16:44.925" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220706 18:16:44.926" level="FAIL">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</msg>
+<status status="FAIL" starttime="20220706 18:16:44.785" endtime="20220706 18:16:44.926"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:43.465" endtime="20220706 18:16:44.927"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:16:44.928" endtime="20220706 18:16:47.111"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:47.112" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:16:47.112" endtime="20220706 18:16:47.112"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:44.928" endtime="20220706 18:16:47.112"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:41.467" endtime="20220706 18:16:47.113">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</status>
+</test>
+<test id="s1-t6" name="Test Case_006" line="34">
+<kw name="Open Browser and Maximize" library="resources1" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 18:16:47.115" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220706 18:16:47.114" endtime="20220706 18:16:48.854"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 18:16:48.854" endtime="20220706 18:16:48.987"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test in ${user_browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:48.988" level="INFO">Starting test in Chrome</msg>
+<status status="PASS" starttime="20220706 18:16:48.988" endtime="20220706 18:16:48.988"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:48.989" level="INFO">Test URL: http://localhost:8080/#/login</msg>
+<status status="PASS" starttime="20220706 18:16:48.988" endtime="20220706 18:16:48.989"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:47.114" endtime="20220706 18:16:48.989"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${unregistered_user}</arg>
+<arg>${unregistered_password}}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[1]/input</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:48.991" level="INFO">Typing text 'admin' into text field 'xpath:/html/body/div/div/div/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220706 18:16:48.990" endtime="20220706 18:16:49.109"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[2]/div[2]/input</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:49.110" level="INFO">Typing password into text field 'xpath:/html/body/div/div/div/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220706 18:16:49.164" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220706 18:16:49.233" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220706 18:16:49.109" endtime="20220706 18:16:49.233"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220706 18:16:49.234" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220706 18:16:49.233" endtime="20220706 18:16:49.309"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220706 18:16:50.318" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220706 18:16:49.310" endtime="20220706 18:16:50.318"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220706 18:16:50.508" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220706 18:16:50.509" level="FAIL">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</msg>
+<status status="FAIL" starttime="20220706 18:16:50.318" endtime="20220706 18:16:50.509"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:48.990" endtime="20220706 18:16:50.510"/>
+</kw>
+<kw name="Close Browser and log" library="resources1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220706 18:16:50.511" endtime="20220706 18:16:52.712"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220706 18:16:52.713" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20220706 18:16:52.712" endtime="20220706 18:16:52.713"/>
+</kw>
+<status status="PASS" starttime="20220706 18:16:50.510" endtime="20220706 18:16:52.713"/>
+</kw>
+<status status="FAIL" starttime="20220706 18:16:47.113" endtime="20220706 18:16:52.713">Location should have been 'http://localhost:8080/#/home' but was 'http://localhost:8080/#/login'.</status>
+</test>
+<status status="FAIL" starttime="20220706 18:16:18.453" endtime="20220706 18:16:52.715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="4" skip="0" id="s1" name="First Checks">First Checks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
