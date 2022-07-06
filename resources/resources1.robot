@@ -30,3 +30,10 @@ Click to eye
     click button    xpath:/html/body/div/div/div/div[2]/div[2]/button
     sleep    1
 
+Logic form
+    click button    xpath:/html/body/div/div/button
+    [Arguments]    ${user_name}    ${user_password}
+    input text    xpath:/html/body/div/div/div/div[2]/div[1]/input    ${user_name}
+    input password    xpath:/html/body/div/div/div/div[2]/div[2]/input    ${user_password}
+    click button    xpath:/html/body/div/div/div/div[3]/button
+
