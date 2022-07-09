@@ -9,35 +9,50 @@ Variables   ../../resources/variables.py
 Test Case_007
     [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
     Login to Webpage    ${user}    ${password}
-    click button    xpath:/html/body/div/div/button
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[1]/input   ${norm_title}
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[2]/input    ${norm_isbn}
-    click button    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[2]/button[2]
-    click button    xpath:/html/body/div[2]/div/div[2]/button[2]
+    Technical Physical    ${norm_title}    ${norm_isbn}
+    [Teardown]    Close Browser and log
+
+Test Case_008
+    [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
+    Login to Webpage    ${user}    ${password}
+    Journal Physical    ${norm_title2}    ${norm_isbn}
+    [Teardown]    Close Browser and log
+
+Test Case_009
+    [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
+    Login to Webpage    ${user}    ${password}
+    Novel Physical    ${norm_title3}    ${norm_isbn}
+    [Teardown]    Close Browser and log
+
+Test Case_010
+    [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
+    Login to Webpage    ${user}    ${password}
+    Technical Digital    ${norm_title4}    ${norm_isbn}
+    [Teardown]    Close Browser and log
+
+Test Case_011
+    [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
+    Login to Webpage    ${user}    ${password}
+    Journal Digital    ${norm_title5}    ${norm_isbn}
+    [Teardown]    Close Browser and log
+
+Test Case_012
+    [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
+    Login to Webpage    ${user}    ${password}
+    Novel Digital    ${norm_title6}    ${norm_isbn}
     [Teardown]    Close Browser and log
 
 Test Case_014
     [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
     Login to Webpage    ${user}    ${password}
-    click button    xpath:/html/body/div/div/button
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[1]/input   ${norm_title}
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[2]/input    ${norm_isbn}
-    click button    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[2]/button[2]
-    click button    xpath:/html/body/div[2]/div/div[2]/button[2]
-    click button    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[3]/div/button
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[1]/input  ${norm_title2}
-    click button    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[2]/div/button[2]
-    click button    xpath:/html/body/div[2]/div/div[2]/button[2]
+    Journal Digital    ${norm_title5}    ${norm_isbn}
+    Edit    ${new_t}
     [Teardown]    Close Browser and log
 
 Test Case_015
     [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
     Login to Webpage    ${user}    ${password}
-    click button    xpath:/html/body/div/div/button
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[1]/input   ${norm_title}
-    input text    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[1]/div[2]/input    ${norm_isbn}
-    click button    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[2]/button[2]
-    click button    xpath:/html/body/div[2]/div/div[2]/button[2]
-    click button    xpath:/html/body/div/div/div/main/div[2]/div/div[1]/div[3]/button
-    click button    xpath:/html/body/div[2]/div/div[2]/button[2]
+    Journal Digital    ${norm_title5}    ${norm_isbn}
+    sleep    5
+    Delete
     [Teardown]    Close Browser and log

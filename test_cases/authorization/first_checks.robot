@@ -13,7 +13,7 @@ Test Case_001
 
 Test Case_002
     [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
-    Click to eye  ${password}
+    Click to Eye  ${password}
     [Teardown]    Close Browser and log
 
 Test Case_003
