@@ -12,7 +12,7 @@
 ## Как оценить покрытие требований?
 В данном случае я не успел написать требования к проекту(если это подразумевалось сделать). Мне кажется, что если на каждое требование иметь несколько тест-кейсов, то покрытие будет весьма хорошим.
 
-# Тест-кейсы и баг-репорты тут https://docs.google.com/spreadsheets/d/1s9f4dLQBrOMShoR-pVMApH_gKdc6rGNnhjGePEn3AZQ/edit#gid=0
+# Тест-кейсы и баг-репорты тут https://docs.google.com/spreadsheets/d/1jcwjXMBJTZ-mnDxTWUtqpT2PME9Dc2W_YLkCxkcWmrI/edit?usp=sharing
 
 
 
