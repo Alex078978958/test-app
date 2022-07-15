@@ -3,9 +3,10 @@ Library    SeleniumLibrary
 Resource    ../../resources/resources1.robot
 Variables   ../../resources/variables.py
 
+#Данный тест проверяет работоспособность кнопки гитхаб, которая находится в правом верхнем углу сайта.
 *** Test Cases ***
-Test Case_033
-    [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
+new_window_open_github
+    [Setup]    Start TestCase
     Login to Webpage    ${user}    ${password}
     click button    xpath:/html/body/div/div/div/main/div[1]/div/div[2]/button[1]
-    [Teardown]    Close Browser and log
+    [Teardown]    Close Browser
