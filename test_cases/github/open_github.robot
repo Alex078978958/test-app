@@ -8,5 +8,5 @@ Variables   ../../resources/variables.py
 new_window_open_github
     [Setup]    Start TestCase
     Login to Webpage    ${user}    ${password}
-    click button    xpath:/html/body/div/div/div/main/div[1]/div/div[2]/button[1]
+    click button    //*[@class='md-toolbar-section-end']/child::button
     [Teardown]    Close Browser

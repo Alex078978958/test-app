@@ -9,5 +9,5 @@ Variables   ../../resources/variables.py
 logout
     [Setup]    Start TestCase
     Login to Webpage    ${user}    ${password}
-    click button    xpath:/html/body/div/div/div/main/div[1]/div/div[2]/button[2]
+    Logout
     [Teardown]    Close Browser

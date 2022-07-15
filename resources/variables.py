@@ -25,3 +25,8 @@ new_t = 'new_title'
 
 # ISBN
 norm_isbn = '978-5-05-000140-2'
+
+
+# Authorization
+input_login = "//*[@type='text']"
+
