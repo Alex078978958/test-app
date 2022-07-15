@@ -12,7 +12,6 @@ search
     Technical Physical    ${norm_title}    ${norm_isbn}
     Journal Physical    ${norm_title2}    ${norm_isbn}
     Search Test    ${norm_title2}
-    sleep    5
     [Teardown]    Close Browser
 
 

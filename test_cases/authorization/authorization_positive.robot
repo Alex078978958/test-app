@@ -9,11 +9,11 @@ Variables   ../../resources/variables.py
 #Данный набор тестов проверяет позитивные сценарии авторизации.
 *** Test Cases ***
 successful_authorization
-    Start TestCase
+    [Setup]    Start TestCase
     Login to Webpage    ${user}    ${password}
-    Finish TestCase
+    [Teardown]    Finish TestCase
 
 show_password
-    Start TestCase
+    [Setup]    Start TestCase
     Click to Eye  ${password}
-    Finish TestCase
+    [Teardown]    Finish TestCase

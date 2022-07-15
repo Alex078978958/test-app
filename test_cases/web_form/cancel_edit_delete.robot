@@ -17,7 +17,6 @@ click_delete
     [Setup]    Start TestCase
     Login to Webpage    ${user}    ${password}
     Journal Digital    ${norm_title5}    ${norm_isbn}
-    sleep    5
     Delete
     [Teardown]    Close Browser
 
