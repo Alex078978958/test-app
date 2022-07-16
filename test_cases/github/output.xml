@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220715 19:11:27.389" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220717 00:38:51.088" rpa="false" schemaversion="3">
 <suite id="s1" name="Open Github" source="C:\Games\тестовое\test-app\test_cases\github\open_github.robot">
-<test id="s1-t1" name="new_window_open_github" line="8">
+<test id="s1-t1" name="new_window_open_github" line="11">
 <kw name="Start TestCase" library="resources1" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220715 19:11:27.811" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
-<status status="PASS" starttime="20220715 19:11:27.811" endtime="20220715 19:11:30.486"/>
+<msg timestamp="20220717 00:38:51.467" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220717 00:38:51.466" endtime="20220717 00:38:53.514"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220715 19:11:30.487" endtime="20220715 19:11:30.618"/>
+<status status="PASS" starttime="20220717 00:38:53.514" endtime="20220717 00:38:53.641"/>
 </kw>
-<status status="PASS" starttime="20220715 19:11:27.811" endtime="20220715 19:11:30.618"/>
+<status status="PASS" starttime="20220717 00:38:51.465" endtime="20220717 00:38:53.641"/>
 </kw>
 <kw name="Login to Webpage" library="resources1">
 <arg>${user}</arg>
@@ -23,51 +23,50 @@
 <arg>//*[@type='text']</arg>
 <arg>${user_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 19:11:30.618" level="INFO">Typing text 'test' into text field '//*[@type='text']'.</msg>
-<status status="PASS" starttime="20220715 19:11:30.618" endtime="20220715 19:11:30.774"/>
+<msg timestamp="20220717 00:38:53.644" level="INFO">Typing text 'test' into text field '//*[@type='text']'.</msg>
+<status status="PASS" starttime="20220717 00:38:53.643" endtime="20220717 00:38:53.755"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>//*[@type='password']</arg>
 <arg>${user_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 19:11:30.774" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
-<msg timestamp="20220715 19:11:30.837" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220715 19:11:30.917" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220715 19:11:30.774" endtime="20220715 19:11:30.917"/>
+<msg timestamp="20220717 00:38:53.756" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
+<msg timestamp="20220717 00:38:53.808" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220717 00:38:53.868" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220717 00:38:53.755" endtime="20220717 00:38:53.868"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@class='md-button md-raised md-primary md-theme-default']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220715 19:11:30.918" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
-<status status="PASS" starttime="20220715 19:11:30.918" endtime="20220715 19:11:31.004"/>
+<msg timestamp="20220717 00:38:53.869" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
+<status status="PASS" starttime="20220717 00:38:53.869" endtime="20220717 00:38:53.950"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220715 19:11:32.019" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220715 19:11:31.004" endtime="20220715 19:11:32.019"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[text()='add']/ancestor::button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220717 00:38:53.950" endtime="20220717 00:38:54.202"/>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>http://localhost:8080/#/home</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220715 19:11:32.019" level="INFO">Current location is 'http://localhost:8080/#/home'.</msg>
-<status status="PASS" starttime="20220715 19:11:32.019" endtime="20220715 19:11:32.019"/>
+<msg timestamp="20220717 00:38:54.207" level="INFO">Current location is 'http://localhost:8080/#/home'.</msg>
+<status status="PASS" starttime="20220717 00:38:54.202" endtime="20220717 00:38:54.207"/>
 </kw>
-<status status="PASS" starttime="20220715 19:11:30.618" endtime="20220715 19:11:32.019"/>
+<status status="PASS" starttime="20220717 00:38:53.642" endtime="20220717 00:38:54.207"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@class='md-toolbar-section-end']/child::button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220715 19:11:32.019" level="INFO">Clicking button '//*[@class='md-toolbar-section-end']/child::button'.</msg>
-<status status="PASS" starttime="20220715 19:11:32.019" endtime="20220715 19:11:32.128"/>
+<msg timestamp="20220717 00:38:54.209" level="INFO">Clicking button '//*[@class='md-toolbar-section-end']/child::button'.</msg>
+<status status="PASS" starttime="20220717 00:38:54.208" endtime="20220717 00:38:54.320"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220715 19:11:32.129" endtime="20220715 19:11:34.298"/>
+<status status="PASS" starttime="20220717 00:38:54.321" endtime="20220717 00:38:56.504"/>
 </kw>
-<status status="PASS" starttime="20220715 19:11:27.811" endtime="20220715 19:11:34.298"/>
+<status status="PASS" starttime="20220717 00:38:51.465" endtime="20220717 00:38:56.505"/>
 </test>
-<status status="PASS" starttime="20220715 19:11:27.389" endtime="20220715 19:11:34.298"/>
+<status status="PASS" starttime="20220717 00:38:51.092" endtime="20220717 00:38:56.506"/>
 </suite>
 <statistics>
 <total>

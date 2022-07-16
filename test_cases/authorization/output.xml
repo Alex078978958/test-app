@@ -1,121 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220715 20:24:05.132" rpa="false" schemaversion="3">
-<suite id="s1" name="Authorization Positive" source="C:\Games\тестовое\test-app\test_cases\authorization\authorization_positive.robot">
-<test id="s1-t1" name="successful_authorization" line="11">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220717 00:40:48.037" rpa="false" schemaversion="3">
+<suite id="s1" name="Authorization Negative" source="C:\Games\тестовое\test-app\test_cases\authorization\authorization_negative.robot">
+<test id="s1-t1" name="unsuccessful_authorization_empty_user_and_entered_password" line="11">
 <kw name="Start TestCase" library="resources1" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220715 20:24:05.516" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
-<status status="PASS" starttime="20220715 20:24:05.515" endtime="20220715 20:24:07.531"/>
+<msg timestamp="20220717 00:40:48.421" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220717 00:40:48.419" endtime="20220717 00:40:50.431"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220715 20:24:07.531" endtime="20220715 20:24:07.677"/>
+<status status="PASS" starttime="20220717 00:40:50.432" endtime="20220717 00:40:50.564"/>
 </kw>
-<status status="PASS" starttime="20220715 20:24:05.514" endtime="20220715 20:24:07.678"/>
+<status status="PASS" starttime="20220717 00:40:48.419" endtime="20220717 00:40:50.564"/>
 </kw>
 <kw name="Login to Webpage" library="resources1">
-<arg>${user}</arg>
+<arg>${empty_user}</arg>
 <arg>${password}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@type='text']</arg>
 <arg>${user_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 20:24:07.682" level="INFO">Typing text 'test' into text field '//*[@type='text']'.</msg>
-<status status="PASS" starttime="20220715 20:24:07.680" endtime="20220715 20:24:07.809"/>
+<msg timestamp="20220717 00:40:50.566" level="INFO">Typing text '   ' into text field '//*[@type='text']'.</msg>
+<status status="PASS" starttime="20220717 00:40:50.566" endtime="20220717 00:40:50.660"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>//*[@type='password']</arg>
 <arg>${user_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 20:24:07.810" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
-<msg timestamp="20220715 20:24:07.870" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220715 20:24:07.937" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220715 20:24:07.809" endtime="20220715 20:24:07.937"/>
+<msg timestamp="20220717 00:40:50.660" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
+<msg timestamp="20220717 00:40:50.706" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220717 00:40:50.763" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220717 00:40:50.660" endtime="20220717 00:40:50.764"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@class='md-button md-raised md-primary md-theme-default']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220715 20:24:07.937" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
-<status status="PASS" starttime="20220715 20:24:07.937" endtime="20220715 20:24:08.025"/>
+<msg timestamp="20220717 00:40:50.764" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
+<status status="PASS" starttime="20220717 00:40:50.764" endtime="20220717 00:40:50.841"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[text()='add']/ancestor::button</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 20:24:08.025" endtime="20220715 20:24:08.348"/>
+<msg timestamp="20220717 00:40:56.177" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220717 00:40:56.178" level="FAIL">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220717 00:40:50.841" endtime="20220717 00:40:56.205"/>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>http://localhost:8080/#/home</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220715 20:24:08.354" level="INFO">Current location is 'http://localhost:8080/#/home'.</msg>
-<status status="PASS" starttime="20220715 20:24:08.349" endtime="20220715 20:24:08.354"/>
+<status status="NOT RUN" starttime="20220717 00:40:56.205" endtime="20220717 00:40:56.205"/>
 </kw>
-<status status="PASS" starttime="20220715 20:24:07.679" endtime="20220715 20:24:08.354"/>
+<status status="FAIL" starttime="20220717 00:40:50.565" endtime="20220717 00:40:56.206"/>
 </kw>
-<kw name="Finish TestCase" library="resources1" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220715 20:24:08.355" endtime="20220715 20:24:10.540"/>
+<status status="PASS" starttime="20220717 00:40:56.207" endtime="20220717 00:40:58.373"/>
 </kw>
-<status status="PASS" starttime="20220715 20:24:08.354" endtime="20220715 20:24:10.541"/>
-</kw>
-<status status="PASS" starttime="20220715 20:24:05.513" endtime="20220715 20:24:10.541"/>
+<status status="FAIL" starttime="20220717 00:40:48.418" endtime="20220717 00:40:58.373">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</status>
 </test>
-<test id="s1-t2" name="show_password" line="16">
+<test id="s1-t2" name="unsuccessful_authorization_entered_user_and_empty_password" line="14">
 <kw name="Start TestCase" library="resources1" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220715 20:24:10.543" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
-<status status="PASS" starttime="20220715 20:24:10.543" endtime="20220715 20:24:12.475"/>
+<msg timestamp="20220717 00:40:58.376" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220717 00:40:58.375" endtime="20220717 00:41:00.395"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220715 20:24:12.476" endtime="20220715 20:24:12.615"/>
+<status status="PASS" starttime="20220717 00:41:00.395" endtime="20220717 00:41:00.518"/>
 </kw>
-<status status="PASS" starttime="20220715 20:24:10.542" endtime="20220715 20:24:12.615"/>
+<status status="PASS" starttime="20220717 00:40:58.375" endtime="20220717 00:41:00.518"/>
 </kw>
-<kw name="Click to Eye" library="resources1">
-<arg>${password}</arg>
+<kw name="Login to Webpage" library="resources1">
+<arg>${user}</arg>
+<arg>${empty_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@type='text']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:00.521" level="INFO">Typing text 'test' into text field '//*[@type='text']'.</msg>
+<status status="PASS" starttime="20220717 00:41:00.520" endtime="20220717 00:41:00.622"/>
+</kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>//*[@type='password']</arg>
 <arg>${user_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 20:24:12.617" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
-<msg timestamp="20220715 20:24:12.668" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220715 20:24:12.742" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220715 20:24:12.617" endtime="20220715 20:24:12.742"/>
+<msg timestamp="20220717 00:41:00.623" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
+<msg timestamp="20220717 00:41:00.671" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220717 00:41:00.726" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220717 00:41:00.622" endtime="20220717 00:41:00.726"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>//*[@class='md-button md-icon-button md-dense md-input-action md-toggle-password md-theme-default']</arg>
+<arg>//*[@class='md-button md-raised md-primary md-theme-default']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220715 20:24:12.743" level="INFO">Clicking button '//*[@class='md-button md-icon-button md-dense md-input-action md-toggle-password md-theme-default']'.</msg>
-<status status="PASS" starttime="20220715 20:24:12.742" endtime="20220715 20:24:12.829"/>
+<msg timestamp="20220717 00:41:00.726" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
+<status status="PASS" starttime="20220717 00:41:00.726" endtime="20220717 00:41:00.809"/>
 </kw>
-<status status="PASS" starttime="20220715 20:24:12.616" endtime="20220715 20:24:12.830"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[text()='add']/ancestor::button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220717 00:41:06.157" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220717 00:41:06.158" level="FAIL">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220717 00:41:00.809" endtime="20220717 00:41:06.158"/>
 </kw>
-<kw name="Finish TestCase" library="resources1" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" starttime="20220717 00:41:06.159" endtime="20220717 00:41:06.159"/>
+</kw>
+<status status="FAIL" starttime="20220717 00:41:00.519" endtime="20220717 00:41:06.159"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220715 20:24:12.831" endtime="20220715 20:24:14.992"/>
+<status status="PASS" starttime="20220717 00:41:06.160" endtime="20220717 00:41:08.374"/>
 </kw>
-<status status="PASS" starttime="20220715 20:24:12.830" endtime="20220715 20:24:14.992"/>
-</kw>
-<status status="PASS" starttime="20220715 20:24:10.542" endtime="20220715 20:24:14.993"/>
+<status status="FAIL" starttime="20220717 00:40:58.373" endtime="20220717 00:41:08.374">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</status>
 </test>
-<status status="PASS" starttime="20220715 20:24:05.144" endtime="20220715 20:24:14.994"/>
+<test id="s1-t3" name="unsuccessful_authorization_empty_user_and_empty_password" line="17">
+<kw name="Start TestCase" library="resources1" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220717 00:41:08.377" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220717 00:41:08.376" endtime="20220717 00:41:10.418"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220717 00:41:10.418" endtime="20220717 00:41:10.558"/>
+</kw>
+<status status="PASS" starttime="20220717 00:41:08.376" endtime="20220717 00:41:10.558"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${empty_user}</arg>
+<arg>${empty_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@type='text']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:10.560" level="INFO">Typing text '   ' into text field '//*[@type='text']'.</msg>
+<status status="PASS" starttime="20220717 00:41:10.559" endtime="20220717 00:41:10.661"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@type='password']</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:10.662" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
+<msg timestamp="20220717 00:41:10.710" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220717 00:41:10.767" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220717 00:41:10.662" endtime="20220717 00:41:10.767"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class='md-button md-raised md-primary md-theme-default']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:10.767" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
+<status status="PASS" starttime="20220717 00:41:10.767" endtime="20220717 00:41:10.846"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[text()='add']/ancestor::button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220717 00:41:15.982" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220717 00:41:15.983" level="FAIL">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220717 00:41:10.846" endtime="20220717 00:41:15.983"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" starttime="20220717 00:41:15.984" endtime="20220717 00:41:15.984"/>
+</kw>
+<status status="FAIL" starttime="20220717 00:41:10.558" endtime="20220717 00:41:15.984"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220717 00:41:15.985" endtime="20220717 00:41:18.177"/>
+</kw>
+<status status="FAIL" starttime="20220717 00:41:08.375" endtime="20220717 00:41:18.178">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t4" name="unsuccessful_authorization_unregistered_user_and_unregistered_password" line="20">
+<kw name="Start TestCase" library="resources1" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220717 00:41:18.181" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8080/#/login'.</msg>
+<status status="PASS" starttime="20220717 00:41:18.181" endtime="20220717 00:41:20.350"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220717 00:41:20.350" endtime="20220717 00:41:20.495"/>
+</kw>
+<status status="PASS" starttime="20220717 00:41:18.180" endtime="20220717 00:41:20.495"/>
+</kw>
+<kw name="Login to Webpage" library="resources1">
+<arg>${unregistered_user}</arg>
+<arg>${unregistered_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@type='text']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:20.498" level="INFO">Typing text 'admin' into text field '//*[@type='text']'.</msg>
+<status status="PASS" starttime="20220717 00:41:20.497" endtime="20220717 00:41:20.651"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@type='password']</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:20.652" level="INFO">Typing password into text field '//*[@type='password']'.</msg>
+<msg timestamp="20220717 00:41:20.736" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220717 00:41:20.832" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220717 00:41:20.651" endtime="20220717 00:41:20.832"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class='md-button md-raised md-primary md-theme-default']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220717 00:41:20.833" level="INFO">Clicking button '//*[@class='md-button md-raised md-primary md-theme-default']'.</msg>
+<status status="PASS" starttime="20220717 00:41:20.832" endtime="20220717 00:41:20.953"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[text()='add']/ancestor::button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220717 00:41:26.088" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220717 00:41:26.088" level="FAIL">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220717 00:41:20.953" endtime="20220717 00:41:26.089"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:8080/#/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" starttime="20220717 00:41:26.089" endtime="20220717 00:41:26.089"/>
+</kw>
+<status status="FAIL" starttime="20220717 00:41:20.496" endtime="20220717 00:41:26.090"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220717 00:41:26.091" endtime="20220717 00:41:28.296"/>
+</kw>
+<status status="FAIL" starttime="20220717 00:41:18.180" endtime="20220717 00:41:28.297">Element '//*[text()='add']/ancestor::button' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20220717 00:40:48.039" endtime="20220717 00:41:28.298"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Authorization Positive">Authorization Positive</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="Authorization Negative">Authorization Negative</stat>
 </suite>
 </statistics>
 <errors>
