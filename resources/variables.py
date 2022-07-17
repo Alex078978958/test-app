@@ -23,7 +23,22 @@ norm_title5 = 'test_5'
 norm_title6 = 'test_6'
 new_t = 'new_title'
 
+title_lower_limit_value_less = "qw"
+title_lower_limit_value_equal = "qwe"
+title_lower_limit_value_big = "qwer"
+
+title_upper_limit_value_less = "0123456789012345678901234567890123456789012345678"
+title_upper_limit_value_equal = "01234567890123456789012345678901234567890123456789"
+title_upper_limit_value_big = "012345678901234567890123456789012345678901234567890"
+
+
 # ISBN
 norm_isbn = '978-5-05-000140-2'
 
+isbn_lower_limit_value_less = "978-5-05-"
+isbn_lower_limit_value_equal = "978-5-05-0"
+isbn_lower_limit_value_big = "978-5-05-00"
 
+isbn_upper_limit_value_less = "978-5-05-000140-122"
+isbn_upper_limit_value_equal = "978-5-05-000140-1221"
+isbn_upper_limit_value_big = "978-5-05-000140-12211"
